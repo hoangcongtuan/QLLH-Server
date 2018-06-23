@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     date.setUTCHours(date.getUTCHours() + /*VN timeZone */ 7 + date.getTimezoneOffset() / 60);
     let nowTime = date.getHours() + ":" + date.getMinutes();
     let data = {
-        status: "App is running",
+        status: "App is running , app is running, app is running",
         time: nowTime
     };
     res.end(JSON.stringify(data, null, 4));
