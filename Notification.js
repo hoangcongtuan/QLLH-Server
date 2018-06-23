@@ -6,7 +6,7 @@ const log = require('npmlog');
 
 //inti admin
 const admin = require('firebase-admin');
-let serviceAccount = process.env.ADMIN ? JSON.parse(process.env.ADMIN) : require(__dirname + '/admin.json');
+let serviceAccount = process.env.service_account_key ? JSON.parse(process.env.ADMIN) : require(__dirname + '/admin.json');
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
     databaseURL: 'https://server-dut.firebaseio.com'
