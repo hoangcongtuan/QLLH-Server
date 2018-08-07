@@ -134,8 +134,8 @@ function sendNotification(noti) {
     let payload = {
         data: {
             thoi_gian: noti.day.replace(":", ""),
-            tieu_de: noti.event,
-            noi_dung: noti.content,
+            // tieu_de: noti.event,
+            // noi_dung: noti.content,
             id: noti.key,
             type: type,
             screen: "main",
