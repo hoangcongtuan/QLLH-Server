@@ -5,8 +5,9 @@
   "author": "Hongarc",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "express": "^4.16.2",
-    "firebase-admin": "^5.8.0",
+    "express": "^4.16.3",
+    "firebase-admin": "^5.13.1",
+    "json-size": "^1.0.0",
     "md5": "^2.2.1",
     "npmlog": "^4.1.2",
     "request": "^2.87.0"
@@ -14,5 +15,15 @@
   "license": "MIT",
   "scripts": {
     "start": "node index"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoangcongtuan/QLLH-Server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hoangcongtuan/QLLH-Server/issues"
+  },
+  "homepage": "https://github.com/hoangcongtuan/QLLH-Server#readme",
+  "description": ""
 }

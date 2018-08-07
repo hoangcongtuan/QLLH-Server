@@ -4,6 +4,8 @@ const cheerio = require('cheerio');
 const md5 = require('md5');
 const log = require('npmlog');
 
+var jsonSize = require('json-size')
+
 //inti admin
 const admin = require('firebase-admin');
 let serviceAccount = process.env.service_account_key ? JSON.parse(process.env.service_account_key) : require(__dirname + '/admin.json');
@@ -144,6 +146,7 @@ function sendNotification(noti) {
         }
     };
     console.log(payload);
+    console.log('payload size = ', jsonSize(payload))
     for (let maHP of noti.maHP) {
 
         console.log(maHP);
