@@ -95,11 +95,11 @@ function getClassCode(className, name) {
     for (let topic in listHP) {
         if (listHP.hasOwnProperty(topic) && topic.indexOf(className) >= 0
             && listHP[topic].tenHP.replace(/\+/g, ' ').indexOf(name.trim()) >= 0) {
-            log.info('topic', topic);
+            //log.info('topic', topic);
             return topic;
         }
     }
-    log.error('failed', {className, name});
+    //log.error('failed', {className, name});
     return '';
 }
 
