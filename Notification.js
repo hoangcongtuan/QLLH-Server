@@ -137,7 +137,7 @@ function sendNotification(noti) {
     }
     let payload = {
         data: {
-            timestamp: date.getTime(),
+            timestamp: date.getTime().toString(),
             thoi_gian: noti.day.replace(":", ""),
             // tieu_de: noti.event,
             // noi_dung: noti.content,
