@@ -125,9 +125,11 @@ function getAllClass(title) {
         }
     }
     return allClass;
+
 }
 
 function sendNotification(noti) {
+    var date = new Date()
     let type = NOTI_TYPE.hp;
     if (noti.maHP.length === 0) {
         type = NOTI_TYPE.chung;
@@ -135,13 +137,14 @@ function sendNotification(noti) {
     }
     let payload = {
         data: {
+            timestamp: date.getTime(),
             thoi_gian: noti.day.replace(":", ""),
             // tieu_de: noti.event,
             // noi_dung: noti.content,
             id: noti.key,
             type: type,
             screen: "main",
-            title: noti.day + noti.event,
+            title: noti.event,
             body: noti.content.replace(/<.*?>/g, "").replace(/<.*?>/g, "").trim()
         }
     };
